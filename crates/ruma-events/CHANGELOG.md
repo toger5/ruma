@@ -66,6 +66,8 @@ Breaking changes:
 - The `event_id` field of `PreviousRoom` is now optional and deprecated. It has been removed in new
   room versions so clients should not rely on it. They can obtain it by requesting the
   `m.room.tombstone` event in the state of the predecessor.
+- The state key type `CallMemberStateKey` for `m.call.member` state events changed to allow any postfix
+  for state keys. The `device_id()` method is not available anymore. Use the event content instead.
 
 Improvements:
 
